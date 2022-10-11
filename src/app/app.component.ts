@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'stencil-angularapp-demo';
+  isLoading: boolean = true;
+
+  ngOnInit() {
+    setTimeout(() => { this.isLoading = false; }, 8000)
+  }
+
 }
